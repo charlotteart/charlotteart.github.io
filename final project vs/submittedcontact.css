@@ -1,0 +1,136 @@
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+  
+div.a a{
+    color: darkblue;
+    font-family: "Playwrite GB J", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+div.a a{
+    font-size: 50px;
+    text-decoration: none;
+  }
+  * {box-sizing: border-box}
+ body {font-family: Arial, Helvetica, sans-serif;}
+
+div.a {
+    text-align: center;
+  }
+
+  div.a a:hover {
+    color: #db005f;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.navbar a {
+  width: 100%;
+  background-color: lavenderblush;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: darkblue;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Five links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+    color: royalblue;
+}
+
+.navbar a.active {
+  background-color: lightgoldenrodyellow;
+}
+
+.navbar a.active:hover {
+    color: royalblue;
+  }
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: darkblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the container/contact section */
+.row {
+  border-radius: 5px;
+  background-color: white;
+  padding: 0px;
+  font-family: "Tajawal", sans-serif;
+  color: royalblue;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    content: "";
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+p1 {
+  border-radius: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.title {
+  font-family: "Tajawal", sans-serif;
+  color: #db005f;
+  text-align:center;
+  margin-top: 100px;
+}
+
+p3{
+    color: #db005f;
+    margin-left: 20px;
+}

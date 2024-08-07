@@ -1,0 +1,138 @@
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+  
+div.a a{
+    color: darkblue;
+    font-family: "Playwrite GB J", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+div.a a{
+    font-size: 50px;
+    text-decoration: none;
+  }
+  * {box-sizing: border-box}
+ body {font-family: Arial, Helvetica, sans-serif;}
+
+div.a {
+    text-align: center;
+  }
+
+  div.a a:hover {
+    color: #db005f;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.navbar a {
+  width: 100%;
+  background-color: lavenderblush;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: darkblue;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Five links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+    color: royalblue;
+}
+
+.navbar a.active {
+  background-color: lightgoldenrodyellow;
+}
+
+.navbar a.active:hover {
+    color: royalblue;
+  }
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Style the form element with a border around it */
+form {
+  border: 4px solid lightgoldenrodyellow;
+  margin-top: 80px;
+  font-family: "Tajawal", sans-serif;
+  color: royalblue;
+  float: none;
+  display: grid;
+  margin: 10px;
+}
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 10px;
+  background-color: white;
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: darkblue;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: pink;
+}
+
+p1{
+  color: #db005f;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500px;
+  font-size: 25px;
+}
+
+.scrollspy{
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Tajawal", sans-serif;
+  color: darkblue;
+}
+
+img {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 80%;
+}
