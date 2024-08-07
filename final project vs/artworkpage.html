@@ -18,7 +18,51 @@
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
 
 <div class="navbar">
   <a class="active" href="artworkpage.html">Artwork</a> 
@@ -31,7 +75,242 @@
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 </div>
 
-<p>hello this is my artwork</p>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('paintings')"> Paintings</button>
+    <button class="btn" onclick="filterSelection('ceramics')"> Ceramics</button>
+    <button class="btn" onclick="filterSelection('sketches')"> Sketches</button>
+  </div>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column paintings">
+      <div class="content">
+        <img src="pa1.jpeg" style="width:100%">
+        <h4>blablab</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+
+    <div class="column ceramics">
+        <div class="content">
+          <img src="cer1.jpeg" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column ceramics">
+        <div class="content">
+          <img src="cer2.jpeg" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column ceramics">
+        <div class="content">
+          <img src="cer3.jpeg" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+     </div>
+
+    <div class="column paintings">
+        <div class="content">
+          <img src="pa2.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa3.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column ceramics">
+        <div class="content">
+          <img src="cer4.jpeg" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+    </div>
+
+    <div class="column sketches">
+        <div class="content">
+          <img src="sk1.jpeg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk2.jpeg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa4.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa5.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column ceramics">
+        <div class="content">
+          <img src="cer5.jpeg" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+    </div>
+
+    <div class="column sketches">
+        <div class="content">
+          <img src="sk3.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk4.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk5.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk6.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk7.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk8.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column sketches">
+        <div class="content">
+          <img src="sk9.jpg" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa6.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa7.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa8.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa9.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa10.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa11.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa12.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa13.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column paintings">
+        <div class="content">
+          <img src="pa14.jpeg" style="width:100%">
+          <h4>blablab</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+   
+    </div>
+  <!-- END GRID -->
+  </div>
 
 </body>
 </html> 

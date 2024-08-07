@@ -69,3 +69,12 @@ div.a {
     text-align: left;
   }
 }
+ 
+img {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 65%;
+}
